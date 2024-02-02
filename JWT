@@ -1,0 +1,24 @@
+JWT : Json Web token
+a commonly used user authentication and authorization standard, used to exchange data in a secure manner.
+
+COntains 3 sections:
+header, a payload, and a signature
+Header : kind of algorithm uses
+Payload : User info
+Signature : To create the signature part you have to take the encoded header, the encoded payload, a secret, the algorithm specified in the header, and sign that.
+
+
+How to implement it :
+
+Springboot 2.x:
+
+extends WebSecurityConfigurerAdapter  and overrides configure() method in it.
+Over ride OnceForFilter class etc
+
+Springboot 3.x:
+
+Create a Bean for UserDetailsService which had user details .(Authentication)
+Create a Bean for SecurityFilterChain which takes care about Authorization by the Role .
+
+
+
